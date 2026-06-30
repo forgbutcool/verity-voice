@@ -57,7 +57,7 @@ async function generateVoice() {
             },
             body: JSON.stringify({
                 text: text,
-                voice_id: VERITY_VOICE_ID,
+                reference_id: VERITY_VOICE_ID,,
                 // Optional parameters for better quality
                 format: 'mp3',
                 speed: 1.0,
