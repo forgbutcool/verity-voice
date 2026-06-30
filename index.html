@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verity Voice Cloner - Fish Audio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎙️ Verity Voice Cloner</h1>
+            <p class="subtitle">Powered by Fish Audio API</p>
+        </header>
+
+        <main>
+            <div class="voice-preview">
+                <h2>Original Voice Sample</h2>
+                <audio controls>
+                    <source src="https://fish.audio/m/8d21b053e2804e2a890e1cf62f267b6f/" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="voice-id">Voice ID: 8d21b053e2804e2a890e1cf62f267b6f</p>
+            </div>
+
+            <div class="api-setup">
+                <h2>API Configuration</h2>
+                <div class="input-group">
+                    <label for="apiKey">Fish Audio API Key:</label>
+                    <input type="password" id="apiKey" placeholder="Enter your Fish Audio API key">
+                    <button onclick="saveApiKey()" class="btn-secondary">Save Key</button>
+                </div>
+                <p class="note">Get your API key from <a href="https://fish.audio" target="_blank">fish.audio</a></p>
+            </div>
+
+            <div class="text-to-speech">
+                <h2>Generate Voice</h2>
+                <div class="input-group">
+                    <label for="textInput">Enter text to speak:</label>
+                    <textarea id="textInput" placeholder="Type something for Verity to say..." rows="4"></textarea>
+                </div>
+                <button onclick="generateVoice()" class="btn-primary" id="generateBtn">
+                    🎵 Generate Voice
+                </button>
+            </div>
+
+            <div class="output-section" id="outputSection" style="display: none;">
+                <h2>Generated Audio</h2>
+                <audio id="audioPlayer" controls></audio>
+                <div class="loading" id="loadingIndicator" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Generating voice...</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>This is a demo using the Fish Audio API. Voice model: Verity</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
